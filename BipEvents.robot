@@ -13,9 +13,9 @@ ${URL_DASHBOARD}    https://dashboard.bip.events/organiser/6/dashboard
 ${URL_CASHLESS}     https://cashless.tn/
 ${BROSER}   chrome
 ${EMAIL}  amir@event.com
-${PASSWORD}     04815980
+${PASSWORD}
 ${N_RESERVATION}    04F8D9429B6680
-${CODE}     6gDvK
+${CODE}     gDvK
 *** Test Cases ***
 Login Dashboard
     Open Browser  ${URL_EVENT}    ${BROSER}
