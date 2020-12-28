@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201113 17:18:56.904" rpa="false">
+<suite id="s1" name="BipEvents" source="C:\Users\Valvog\PycharmProjects\Robot_Project\BipEvents.robot">
+<test id="s1-t1" name="Login Dashboard">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL_EVENT}</arg>
+<arg>${BROSER}</arg>
+</arguments>
+<msg timestamp="20201113 17:18:57.078" level="INFO">Opening browser 'chrome' to base url 'https://dashboard.bip.events/login'.</msg>
+<status status="PASS" starttime="20201113 17:18:57.078" endtime="20201113 17:19:00.930"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201113 17:19:00.930" endtime="20201113 17:19:03.053"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:03.054" level="INFO">Typing text 'amir@event.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20201113 17:19:03.053" endtime="20201113 17:19:03.114"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:03.115" level="FAIL">Variable '${PASSWORD}' not found.</msg>
+<status status="FAIL" starttime="20201113 17:19:03.115" endtime="20201113 17:19:03.115"></status>
+</kw>
+<status status="FAIL" starttime="20201113 17:18:57.077" endtime="20201113 17:19:03.116" critical="yes">Variable '${PASSWORD}' not found.</status>
+</test>
+<test id="s1-t2" name="Create Event">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="main"]/div/div[2]/div/div[1]/div/div/a</arg>
+</arguments>
+<msg timestamp="20201113 17:19:03.117" level="INFO">Clicking element '//*[@id="main"]/div/div[2]/div/div[1]/div/div/a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201113 17:19:03.421" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201113 17:19:03.126" endtime="20201113 17:19:03.421"></status>
+</kw>
+<msg timestamp="20201113 17:19:03.423" level="FAIL">Element with locator '//*[@id="main"]/div/div[2]/div/div[1]/div/div/a' not found.</msg>
+<status status="FAIL" starttime="20201113 17:19:03.117" endtime="20201113 17:19:03.423"></status>
+</kw>
+<status status="FAIL" starttime="20201113 17:19:03.117" endtime="20201113 17:19:03.423" critical="yes">Element with locator '//*[@id="main"]/div/div[2]/div/div[1]/div/div/a' not found.</status>
+</test>
+<test id="s1-t3" name="Edit Event">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_CUSTOMIZE}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:03.425" level="INFO">Opening url 'https://dashboard.bip.events/event/63/customize'</msg>
+<status status="PASS" starttime="20201113 17:19:03.424" endtime="20201113 17:19:03.944"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:10.946" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:03.944" endtime="20201113 17:19:10.946"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:03.424" endtime="20201113 17:19:10.946" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Edit Conception of Event">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_CUSTOMIZE}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:10.948" level="INFO">Opening url 'https://dashboard.bip.events/event/63/customize'</msg>
+<status status="PASS" starttime="20201113 17:19:10.948" endtime="20201113 17:19:11.518"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:18.520" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:11.519" endtime="20201113 17:19:18.520"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:10.947" endtime="20201113 17:19:18.520" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Create Ticket">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_TICKET}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:18.522" level="INFO">Opening url 'https://dashboard.bip.events/event/63/tickets'</msg>
+<status status="PASS" starttime="20201113 17:19:18.522" endtime="20201113 17:19:19.078"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:26.079" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:19.078" endtime="20201113 17:19:26.079"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:18.521" endtime="20201113 17:19:26.079" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Edit Ticket">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_TICKET}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:26.080" level="INFO">Opening url 'https://dashboard.bip.events/event/63/tickets'</msg>
+<status status="PASS" starttime="20201113 17:19:26.080" endtime="20201113 17:19:26.610"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:33.612" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:26.610" endtime="20201113 17:19:33.612"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:26.080" endtime="20201113 17:19:33.612" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Edit Conception of Ticket">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_CUSTOMIZE}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:33.614" level="INFO">Opening url 'https://dashboard.bip.events/event/63/customize'</msg>
+<status status="PASS" starttime="20201113 17:19:33.614" endtime="20201113 17:19:34.116"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:41.117" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:34.116" endtime="20201113 17:19:41.117"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:33.613" endtime="20201113 17:19:41.117" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Edit Cashless Preferences">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_CUSTOMIZE}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:41.119" level="INFO">Opening url 'https://dashboard.bip.events/event/63/customize'</msg>
+<status status="PASS" starttime="20201113 17:19:41.119" endtime="20201113 17:19:41.653"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:48.656" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:41.654" endtime="20201113 17:19:48.656"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:41.118" endtime="20201113 17:19:48.656" critical="yes"></status>
+</test>
+<test id="s1-t9" name="List Orders">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ORDERS}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:48.658" level="INFO">Opening url 'https://dashboard.bip.events/event/63/orders'</msg>
+<status status="PASS" starttime="20201113 17:19:48.658" endtime="20201113 17:19:49.147"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:19:56.150" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:49.147" endtime="20201113 17:19:56.150"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:48.657" endtime="20201113 17:19:56.150" critical="yes"></status>
+</test>
+<test id="s1-t10" name="List Attendees">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:19:56.152" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:19:56.152" endtime="20201113 17:19:56.679"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:03.682" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:19:56.679" endtime="20201113 17:20:03.682"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:19:56.151" endtime="20201113 17:20:03.682" critical="yes"></status>
+</test>
+<test id="s1-t11" name="Invite Attendee">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:03.684" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:20:03.684" endtime="20201113 17:20:04.232"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:11.234" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:04.233" endtime="20201113 17:20:11.234"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:03.683" endtime="20201113 17:20:11.234" critical="yes"></status>
+</test>
+<test id="s1-t12" name="Invite Several Attendees">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:11.236" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:20:11.236" endtime="20201113 17:20:11.746"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:18.749" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:11.747" endtime="20201113 17:20:18.749"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:11.235" endtime="20201113 17:20:18.749" critical="yes"></status>
+</test>
+<test id="s1-t13" name="Export List of Attendees">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:18.751" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:20:18.751" endtime="20201113 17:20:19.398"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:26.399" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:19.398" endtime="20201113 17:20:26.399"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:18.750" endtime="20201113 17:20:26.399" critical="yes"></status>
+</test>
+<test id="s1-t14" name="Send Message to Attendees">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:26.401" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:20:26.401" endtime="20201113 17:20:26.887"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:33.888" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:26.887" endtime="20201113 17:20:33.888"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:26.401" endtime="20201113 17:20:33.888" critical="yes"></status>
+</test>
+<test id="s1-t15" name="Send Message to Attendee">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:33.890" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:20:33.889" endtime="20201113 17:20:34.385"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:33.889" endtime="20201113 17:20:34.385" critical="yes"></status>
+</test>
+<test id="s1-t16" name="List of Sent Message">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_ATTENDEES}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:34.387" level="INFO">Opening url 'https://dashboard.bip.events/event/63/attendees'</msg>
+<status status="PASS" starttime="20201113 17:20:34.387" endtime="20201113 17:20:34.922"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:34.386" endtime="20201113 17:20:34.922" critical="yes"></status>
+</test>
+<test id="s1-t17" name="Create Terminal">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_DASHBOARD}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:34.924" level="INFO">Opening url 'https://dashboard.bip.events/organiser/6/dashboard'</msg>
+<status status="PASS" starttime="20201113 17:20:34.924" endtime="20201113 17:20:35.429"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:34.923" endtime="20201113 17:20:35.429" critical="yes"></status>
+</test>
+<test id="s1-t18" name="Add Permision To Terminal">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_DASHBOARD}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:35.431" level="INFO">Opening url 'https://dashboard.bip.events/organiser/6/dashboard'</msg>
+<status status="PASS" starttime="20201113 17:20:35.430" endtime="20201113 17:20:35.935"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:35.430" endtime="20201113 17:20:35.935" critical="yes"></status>
+</test>
+<test id="s1-t19" name="List Tags NFC">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_DASHBOARD}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:35.937" level="INFO">Opening url 'https://dashboard.bip.events/organiser/6/dashboard'</msg>
+<status status="PASS" starttime="20201113 17:20:35.937" endtime="20201113 17:20:36.437"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:35.936" endtime="20201113 17:20:36.437" critical="yes"></status>
+</test>
+<test id="s1-t20" name="List transaction">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_DASHBOARD}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:36.439" level="INFO">Opening url 'https://dashboard.bip.events/organiser/6/dashboard'</msg>
+<status status="PASS" starttime="20201113 17:20:36.439" endtime="20201113 17:20:36.899"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:43.901" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:36.900" endtime="20201113 17:20:43.901"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:36.438" endtime="20201113 17:20:43.901" critical="yes"></status>
+</test>
+<test id="s1-t21" name="Add Product">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_DASHBOARD}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:43.903" level="INFO">Opening url 'https://dashboard.bip.events/organiser/6/dashboard'</msg>
+<status status="PASS" starttime="20201113 17:20:43.903" endtime="20201113 17:20:44.422"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:43.902" endtime="20201113 17:20:44.423" critical="yes"></status>
+</test>
+<test id="s1-t22" name="Add Access Codes">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_EVENT}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:44.425" level="INFO">Opening url 'https://dashboard.bip.events/login'</msg>
+<status status="PASS" starttime="20201113 17:20:44.424" endtime="20201113 17:20:44.703"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:20:51.705" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:44.703" endtime="20201113 17:20:51.705"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:44.424" endtime="20201113 17:20:51.705" critical="yes"></status>
+</test>
+<test id="s1-t23" name="Add Question">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_EVENT}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:51.707" level="INFO">Opening url 'https://dashboard.bip.events/login'</msg>
+<status status="PASS" starttime="20201113 17:20:51.706" endtime="20201113 17:20:51.979"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:51.706" endtime="20201113 17:20:51.980" critical="yes"></status>
+</test>
+<test id="s1-t24" name="Offline Payment Setting">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_CUSTOMIZE}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:51.982" level="INFO">Opening url 'https://dashboard.bip.events/event/63/customize'</msg>
+<status status="PASS" starttime="20201113 17:20:51.982" endtime="20201113 17:20:52.460"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:51.981" endtime="20201113 17:20:52.461" critical="yes"></status>
+</test>
+<test id="s1-t25" name="Buy Ticket OffLine">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_PUBLIC_PAGE}</arg>
+</arguments>
+<msg timestamp="20201113 17:20:52.463" level="INFO">Opening url 'https://dashboard.bip.events/e/59/evenement1'</msg>
+<status status="PASS" starttime="20201113 17:20:52.463" endtime="20201113 17:20:54.551"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:21:01.553" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:20:54.551" endtime="20201113 17:21:01.553"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:20:52.462" endtime="20201113 17:21:01.553" critical="yes"></status>
+</test>
+<test id="s1-t26" name="Buy Ticket OnLine">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_PUBLIC_PAGE}</arg>
+</arguments>
+<msg timestamp="20201113 17:21:01.555" level="INFO">Opening url 'https://dashboard.bip.events/e/59/evenement1'</msg>
+<status status="PASS" starttime="20201113 17:21:01.555" endtime="20201113 17:21:02.525"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:21:09.527" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:21:02.525" endtime="20201113 17:21:09.527"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:21:01.554" endtime="20201113 17:21:09.527" critical="yes"></status>
+</test>
+<test id="s1-t27" name="Login Cashless Account">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL_CASHLESS}</arg>
+</arguments>
+<msg timestamp="20201113 17:21:09.529" level="INFO">Opening url 'https://cashless.tn/'</msg>
+<status status="PASS" starttime="20201113 17:21:09.529" endtime="20201113 17:21:10.249"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:21:09.528" endtime="20201113 17:21:10.249" critical="yes"></status>
+</test>
+<test id="s1-t28" name="Deactivate Wristband">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:21:17.252" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:21:10.251" endtime="20201113 17:21:17.252"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:21:10.250" endtime="20201113 17:21:17.252" critical="yes"></status>
+</test>
+<test id="s1-t29" name="Activate Wristband">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:21:24.255" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:21:17.254" endtime="20201113 17:21:24.255"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:21:17.253" endtime="20201113 17:21:24.255" critical="yes"></status>
+</test>
+<test id="s1-t30" name="Reload Wristband">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20201113 17:21:31.259" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20201113 17:21:24.256" endtime="20201113 17:21:31.259"></status>
+</kw>
+<status status="PASS" starttime="20201113 17:21:24.256" endtime="20201113 17:21:31.259" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20201113 17:18:56.906" endtime="20201113 17:21:31.262"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="28" fail="2">Critical Tests</stat>
+<stat pass="28" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="28" fail="2" id="s1" name="BipEvents">BipEvents</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20201113 17:18:56.899" level="ERROR">Error in file 'C:\Users\Valvog\PycharmProjects\Robot_Project\BipEvents.robot' on line 14: Invalid variable name ''.</msg>
+</errors>
+</robot>

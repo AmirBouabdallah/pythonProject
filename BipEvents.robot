@@ -1,7 +1,5 @@
-
 *** Settings ***
 Library  SeleniumLibrary
-
 *** Variables ***
 ${URL_EVENT}   https://dashboard.bip.events/login
 ${URL_PUBLIC_PAGE}  https://dashboard.bip.events/e/59/evenement1
@@ -12,10 +10,10 @@ ${URL_CUSTOMIZE}    https://dashboard.bip.events/event/63/customize
 ${URL_DASHBOARD}    https://dashboard.bip.events/organiser/6/dashboard
 ${URL_CASHLESS}     https://cashless.tn/
 ${BROSER}   chrome
-${EMAIL}  amir@event.com
-${PASSWORD}
+${EMAIL}  **********
+${PASSWORD}    *******
 ${N_RESERVATION}    04F8D9429B6680
-${CODE}     gDvK
+${CODE}     *********
 *** Test Cases ***
 Login Dashboard
     Open Browser  ${URL_EVENT}    ${BROSER}
@@ -79,6 +77,8 @@ List Tags NFC
 List transaction
     Go to   ${URL_DASHBOARD}
     sleep   7s
+Add Product
+    Go to   ${URL_DASHBOARD}
 Add Access Codes
     Go to   ${URL_EVENT}
     sleep   7s
